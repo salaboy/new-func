@@ -1,0 +1,23 @@
+specVersion: 0.35.0
+name: new-func
+runtime: go
+registry: localhost:50000/func
+image: localhost:50000/func/new-func:latest
+imageDigest: sha256:0890f5e5789edddb94aecd87cdd4af0920382c6774025b3ef032acf2724b0b96
+created: 2023-04-15T10:04:03.797842+01:00
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: oci
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: default
+  remote: false
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints: {}
